@@ -2,9 +2,17 @@
 
 // setting
 @import "setting/reset";
-@import "setting/common";
 @import "setting/var";
 @import "setting/mixin";
+@import "setting/common";
 @import "setting/fonts";
 
 // section
+@import "section/header";
+@import "section/home";
+@import "section/today";
+@import "section/channel";
+@import "section/video";
+@import "section/search";
+@import "section/not";
+@import "section/footer";
