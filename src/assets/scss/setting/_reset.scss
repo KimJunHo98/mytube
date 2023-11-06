@@ -1,0 +1,49 @@
+// 전체 초기화
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// 폰트 초기화 
+html { font-size: 62.5%; /* 1rem = 10px */ }
+body, input, textarea, select, button, table { 
+    font-family: var(--mainKor-font), var(--mainEng-font), "Apple SD Gothic Neo",
+    "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+}
+
+// 디자인 초기화
+input, textarea, button, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    font-size: 16px;
+    border: 0;
+}
+
+// 링크 초기화
+a, a:hover, a:focus {
+    color: #222;
+    text-decoration: none;
+}
+
+// 스타일 초기화
+h1, h2, h3, h4, h5, h6 { 
+    font-weight: normal; 
+}
+ul, li, ol { list-style: none; }
+em, address { font-style: normal; }
+button { border: 0; }
+
+// 테두리 초기화 
+img, fieldset { border: 0 none; }
+
+// 반응형 이미지 
+img, video { width: 100%; }
+
+// IR 효과 
+.blind { overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px; }
+.ir { display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px; white-space: nowrap; }
