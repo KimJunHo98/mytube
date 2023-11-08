@@ -1,0 +1,88 @@
+.menu_container {
+    width: 100%;
+    max-width: 260px;
+    height: 100%;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    overflow-y: auto;
+    background-color: var(--black);
+
+    .nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .menu_list {
+            padding: 10px 20px;
+            border-bottom: 1px solid var(--black300);
+
+            .list_title {
+                padding-bottom: 5px;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+
+            .menu_items {
+                width: 100%;
+
+                .menu_links, .more_links {
+                    display: block;
+                    padding: 10px;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    color: var(--white);
+
+                    span {
+                        padding-right: 10px;
+                        pointer-events: auto;
+
+                        svg {
+                            vertical-align: text-top;
+                            font-size: 2rem;
+                        }
+                    }
+
+                    &.show, &:hover {
+                        border-radius: 10px;
+                        background-color: rgba(50, 50, 50, 0.8);
+                    }
+                }
+            }
+        }
+        .small_menu_list {
+            padding: 6px 20px 10px 15px;
+
+            .menu_items {
+                width: 100%;
+
+                .menu_links {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 15px;
+                    margin-bottom: 5px;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: var(--white);
+
+                    span {
+                        display: block;
+                        pointer-events: auto;
+
+                        svg {
+                            vertical-align: text-top;
+                            font-size: 2rem;
+                        }
+                    }
+
+                    &.show, &:hover {
+                        border-radius: 10px;
+                        background-color: rgba(50, 50, 50, 0.8);
+                    }
+                }
+            }
+        }
+    }
+}

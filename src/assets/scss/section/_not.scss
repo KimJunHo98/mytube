@@ -1,0 +1,13 @@
+.not_found {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+
+    .err_message {
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        color: var(--white);
+    }
+}
