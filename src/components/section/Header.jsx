@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useActiveMenu } from "../context/useActiveMenu";
-import Search from "../pages/Search";
+import { useActiveMenu } from "../../context/useActiveMenu";
+import Search from "../../pages/Search";
 
 import { AiFillBell, AiFillYoutube, AiOutlineBell } from "react-icons/ai";
 

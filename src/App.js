@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ActiveMenuProvider } from "./context/useActiveMenu";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Header from "./components/section/Header";
+import Main from "./components/section/Main";
+import Footer from "./components/section/Footer";
 import Home from "./pages/Home";
 import Recommend from "./pages/Recommend";
 import Subscribe from "./pages/Subscribe";
