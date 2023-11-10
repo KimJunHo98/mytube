@@ -1,17 +1,22 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const Recommend = () => {
+const Recommend = ({ title, description }) => {
     return (
-        <section id="Recommend">
-            <h2 className="blind">개발 추천영상</h2>
-            <div className="container">
-                <div className="inner">
-                    <div className="Recommend">
-                        {/* 개발추천영상 */}
+        <>
+            <Helmet titleTemplate="%s | MyTube" defaultTitle="MyTube" defer={false}>
+                {title && <title>{title}</title>}
+                <meta name="description" content={description} />
+            </Helmet>
+            <section id="recommend">
+                <h2 className="blind">개발 추천영상</h2>
+                <div className="container">
+                    <div className="inner">
+                        <div className="recommend">Recommend</div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 };
 

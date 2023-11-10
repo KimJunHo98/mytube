@@ -35,10 +35,10 @@ const Header = () => {
                         <Search />
                     </div>
                     <div className="header_right">
-                        <div className="alarm" onClick={handleAlarmClick}>
+                        <div className="right_items alarm" onClick={handleAlarmClick}>
                             <span>{show ? <AiFillBell /> : <AiOutlineBell />}</span>
                         </div>
-                        <div className="profile">
+                        <div className="right_items profile">
                             <p>JUN</p>
                         </div>
                     </div>
