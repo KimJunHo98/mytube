@@ -32,7 +32,8 @@
                     text-align: left;
                     background-color: transparent;
                 }
-                .menu_links, .more_links {
+                .menu_links,
+                .more_links {
                     display: block;
                     padding: 10px;
                     font-size: 1.4rem;
@@ -49,7 +50,8 @@
                         }
                     }
 
-                    &.show, &:hover {
+                    &.show,
+                    &:hover {
                         border-radius: 10px;
                         background-color: rgba(50, 50, 50, 0.8);
                     }
@@ -82,7 +84,8 @@
                         }
                     }
 
-                    &.show, &:hover {
+                    &.show,
+                    &:hover {
                         border-radius: 10px;
                         background-color: rgba(50, 50, 50, 0.8);
                     }

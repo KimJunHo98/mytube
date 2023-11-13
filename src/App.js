@@ -5,7 +5,6 @@ import { ActiveMenuProvider } from "./context/useActiveMenu";
 
 import Header from "./components/section/Header";
 import Main from "./components/section/Main";
-import Footer from "./components/section/Footer";
 import Home from "./pages/Home";
 import Recommend from "./pages/Recommend";
 import Subscribe from "./pages/Subscribe";
@@ -41,7 +40,6 @@ const App = () => {
                             <Route path="*" element={<Not />} />
                         </Routes>
                     </Main>
-                    <Footer />
                 </BrowserRouter>
             </HelmetProvider>
         </ActiveMenuProvider>
