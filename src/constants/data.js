@@ -17,7 +17,7 @@ export const menus = [
         src: "/subscription",
     },
     {
-        title: "쇼츠",
+        title: "Shorts",
         icon1: <SiShortcut />,
         icon2: <SiShortcut />,
         src: "/shorts",

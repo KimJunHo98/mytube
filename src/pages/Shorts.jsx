@@ -12,7 +12,54 @@ const Shorts = ({ title, description }) => {
                 <h2 className="blind">쇼츠 영상</h2>
                 <div className="container">
                     <div className="inner">
-                        <div className="shorts">shorts</div>
+                        <div className="shorts">
+                            <div className="shorts_area">
+                                <div className="shorts_card">
+                                    <div className="shorts_thumbnail">
+                                        <div className="shorts_info">
+                                            <ul className="video_brand">
+                                                <li className="brand_logo"></li>
+                                                <li className="brand_name">gudok</li>
+                                            </ul>
+                                            <p className="shorts_title">Video Title 1 Video Title 1 Video Title 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="shorts_card">
+                                    <div className="shorts_thumbnail">
+                                        <div className="shorts_info">
+                                            <ul className="video_brand">
+                                                <li className="brand_logo"></li>
+                                                <li className="brand_name">gudok</li>
+                                            </ul>
+                                            <p className="shorts_title">Video Title 1 Video Title 1 Video Title 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="shorts_card">
+                                    <div className="shorts_thumbnail">
+                                        <div className="shorts_info">
+                                            <ul className="video_brand">
+                                                <li className="brand_logo"></li>
+                                                <li className="brand_name">gudok</li>
+                                            </ul>
+                                            <p className="shorts_title">Video Title 1 Video Title 1 Video Title 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="shorts_card">
+                                    <div className="shorts_thumbnail">
+                                        <div className="shorts_info">
+                                            <ul className="video_brand">
+                                                <li className="brand_logo"></li>
+                                                <li className="brand_name">gudok</li>
+                                            </ul>
+                                            <p className="shorts_title">Video Title 1 Video Title 1 Video Title 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

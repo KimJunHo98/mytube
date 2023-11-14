@@ -1,10 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+
 import { ImSpinner8 } from "react-icons/im";
 import { RiArrowDownSLine } from "react-icons/ri";
-// import SubscriptionVideo from "./SubscriptionVideo";
-// import Shorts from "./Shorts";
-// import Recommend from "./Recommend";
+import { SiShortcut } from "react-icons/si";
 
 const Home = ({ title, description }) => {
     return (
@@ -23,12 +22,8 @@ const Home = ({ title, description }) => {
                                     <ImSpinner8 />
                                 </span>
                             </div>
-                            {/* map함수 처리해야함 */}
-
                             <article className="home_contents">
-                                {/* <SubscriptionVideo/>
-                                <Shorts/>
-                                <Recommend/> */}
+                                {/* subcription video */}
                                 <div className="contents_area">
                                     <div className="video_card">
                                         <div className="video_thumbnail"></div>
@@ -127,8 +122,14 @@ const Home = ({ title, description }) => {
                                         </div>
                                     </div>
                                 </div>
+                                {/* shorts */}
                                 <div className="shorts_area">
-                                    <h3 className="shorts_area_title">Shorts</h3>
+                                    <h3 className="shorts_area_title">
+                                        <span className="shorts_icon">
+                                            <SiShortcut />
+                                        </span>
+                                        Shorts
+                                    </h3>
                                     <div className="shorts_container">
                                         <div className="shorts_card">
                                             <div className="shorts_thumbnail"></div>
@@ -136,7 +137,7 @@ const Home = ({ title, description }) => {
                                                 <p className="shorts_title">
                                                     Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
                                                 </p>
-                                                <div className="shorts_channel">Channel Name 1</div>
+                                                <div className="shorts_views">view time 150</div>
                                             </div>
                                         </div>
                                         <div className="shorts_card">
@@ -145,7 +146,7 @@ const Home = ({ title, description }) => {
                                                 <p className="shorts_title">
                                                     Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
                                                 </p>
-                                                <div className="shorts_channel">Channel Name 1</div>
+                                                <div className="shorts_views">view time 150</div>
                                             </div>
                                         </div>
                                         <div className="shorts_card">
@@ -154,7 +155,7 @@ const Home = ({ title, description }) => {
                                                 <p className="shorts_title">
                                                     Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
                                                 </p>
-                                                <div className="shorts_channel">Channel Name 1</div>
+                                                <div className="shorts_views">view time 150</div>
                                             </div>
                                         </div>
                                         <div className="shorts_card">
@@ -163,7 +164,7 @@ const Home = ({ title, description }) => {
                                                 <p className="shorts_title">
                                                     Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
                                                 </p>
-                                                <div className="shorts_channel">Channel Name 1</div>
+                                                <div className="shorts_views">view time 150</div>
                                             </div>
                                         </div>
                                         <div className="shorts_card">
@@ -172,7 +173,7 @@ const Home = ({ title, description }) => {
                                                 <p className="shorts_title">
                                                     Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
                                                 </p>
-                                                <div className="shorts_channel">Channel Name 1</div>
+                                                <div className="shorts_views">view time 150</div>
                                             </div>
                                         </div>
                                         <div className="shorts_card">
@@ -181,7 +182,7 @@ const Home = ({ title, description }) => {
                                                 <p className="shorts_title">
                                                     Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
                                                 </p>
-                                                <div className="shorts_channel">Channel Name 1</div>
+                                                <div className="shorts_views">view time 150</div>
                                             </div>
                                         </div>
                                         <button className="more_btn">
@@ -192,6 +193,7 @@ const Home = ({ title, description }) => {
                                         </button>
                                     </div>
                                 </div>
+                                {/* recommend */}
                                 <div className="contents_area">
                                     <div className="video_card">
                                         <div className="video_thumbnail"></div>

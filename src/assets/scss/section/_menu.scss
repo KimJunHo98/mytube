@@ -5,8 +5,22 @@
     position: fixed;
     top: 64px;
     left: 0;
-    overflow-y: auto;
     background-color: var(--black);
+
+    &:hover {
+        overflow-y: auto;
+    }
+    &:hover::-webkit-scrollbar {
+        width: 8px;  
+    }
+    &:hover::-webkit-scrollbar-thumb {
+        height: 10%;
+        background-color: var(--black500); 
+        border-radius: 10px;
+    }
+    &:hover::-webkit-scrollbar-track {
+        background-color: var(--black);
+    }
 
     .nav {
         width: 100%;
@@ -56,6 +70,12 @@
                         background-color: rgba(50, 50, 50, 0.8);
                     }
                 }
+                &:nth-child(3) svg {
+                    transform: rotate(340deg);
+                }
+            }
+            &.subscribe .menu_items:nth-child(3) svg {
+                transform: rotate(0deg);
             }
         }
         .small_menu_list {
@@ -89,6 +109,9 @@
                         border-radius: 10px;
                         background-color: rgba(50, 50, 50, 0.8);
                     }
+                }
+                &:nth-child(3) svg {
+                    transform: rotate(340deg);
                 }
             }
         }
