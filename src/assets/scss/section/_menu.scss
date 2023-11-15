@@ -3,9 +3,9 @@
     max-width: 260px;
     height: 100%;
     position: fixed;
-    top: 64px;
+    top: 60px;
     left: 0;
-    background-color: var(--black);
+    background-color: var(--bgColor);
 
     &:hover {
         overflow-y: auto;

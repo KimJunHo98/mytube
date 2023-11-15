@@ -11,7 +11,6 @@ const Menu = () => {
     const { activeMenu } = useActiveMenu();
     const [show, setShow] = useState(Array(menus.length).fill(false));
     const location = useLocation();
-    console.log(location);
 
     const handleMenuClick = (i) => {
         setShow((prevShow) => prevShow.map((value, idx) => (idx === i ? !value : false)));

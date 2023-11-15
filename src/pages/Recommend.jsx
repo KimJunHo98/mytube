@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const Recommend = ({ title, description }) => {
     return (
@@ -13,8 +14,9 @@ const Recommend = ({ title, description }) => {
                 <div className="container">
                     <div className="inner">
                         <div className="recommend">
-                        <div className="contents_area">
-                                    <div className="video_card">
+                            <div className="contents_area">
+                                <div className="video_card">
+                                    <Link to="/" className="video_link">
                                         <div className="video_thumbnail"></div>
                                         <div className="video_info">
                                             <ul className="video_details">
@@ -25,92 +27,107 @@ const Recommend = ({ title, description }) => {
                                             </ul>
                                             <div className="video_channel">Channel Name 1</div>
                                         </div>
-                                    </div>
-                                    <div className="video_card">
-                                        <div className="video_thumbnail"></div>
-                                        <div className="video_info">
-                                            <ul className="video_details">
-                                                <li className="video_brand_logo"></li>
-                                                <li className="video_title">
-                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
-                                                </li>
-                                            </ul>
-                                            <div className="video_channel">Channel Name 1</div>
-                                        </div>
-                                    </div>
-                                    <div className="video_card">
-                                        <div className="video_thumbnail"></div>
-                                        <div className="video_info">
-                                            <ul className="video_details">
-                                                <li className="video_brand_logo"></li>
-                                                <li className="video_title">
-                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
-                                                </li>
-                                            </ul>
-                                            <div className="video_channel">Channel Name 1</div>
-                                        </div>
-                                    </div>
-                                    <div className="video_card">
-                                        <div className="video_thumbnail"></div>
-                                        <div className="video_info">
-                                            <ul className="video_details">
-                                                <li className="video_brand_logo"></li>
-                                                <li className="video_title">
-                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
-                                                </li>
-                                            </ul>
-                                            <div className="video_channel">Channel Name 1</div>
-                                        </div>
-                                    </div>
-                                    <div className="video_card">
-                                        <div className="video_thumbnail"></div>
-                                        <div className="video_info">
-                                            <ul className="video_details">
-                                                <li className="video_brand_logo"></li>
-                                                <li className="video_title">
-                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
-                                                </li>
-                                            </ul>
-                                            <div className="video_channel">Channel Name 1</div>
-                                        </div>
-                                    </div>
-                                    <div className="video_card">
-                                        <div className="video_thumbnail"></div>
-                                        <div className="video_info">
-                                            <ul className="video_details">
-                                                <li className="video_brand_logo"></li>
-                                                <li className="video_title">
-                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
-                                                </li>
-                                            </ul>
-                                            <div className="video_channel">Channel Name 1</div>
-                                        </div>
-                                    </div>
-                                    <div className="video_card">
-                                        <div className="video_thumbnail"></div>
-                                        <div className="video_info">
-                                            <ul className="video_details">
-                                                <li className="video_brand_logo"></li>
-                                                <li className="video_title">
-                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
-                                                </li>
-                                            </ul>
-                                            <div className="video_channel">Channel Name 1</div>
-                                        </div>
-                                    </div>
-                                    <div className="video_card">
-                                        <div className="video_thumbnail"></div>
-                                        <div className="video_info">
-                                            <ul className="video_details">
-                                                <li className="video_brand_logo"></li>
-                                                <li className="video_title">
-                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
-                                                </li>
-                                            </ul>
-                                            <div className="video_channel">Channel Name 1</div>
-                                        </div>
-                                    </div>
+                                    </Link>
                                 </div>
+                                <div className="video_card">
+                                    <Link to="/" className="video_link">
+                                        <div className="video_thumbnail"></div>
+                                        <div className="video_info">
+                                            <ul className="video_details">
+                                                <li className="video_brand_logo"></li>
+                                                <li className="video_title">
+                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
+                                                </li>
+                                            </ul>
+                                            <div className="video_channel">Channel Name 1</div>
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div className="video_card">
+                                    <Link to="/" className="video_link">
+                                        <div className="video_thumbnail"></div>
+                                        <div className="video_info">
+                                            <ul className="video_details">
+                                                <li className="video_brand_logo"></li>
+                                                <li className="video_title">
+                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
+                                                </li>
+                                            </ul>
+                                            <div className="video_channel">Channel Name 1</div>
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div className="video_card">
+                                    <Link to="/" className="video_link">
+                                        <div className="video_thumbnail"></div>
+                                        <div className="video_info">
+                                            <ul className="video_details">
+                                                <li className="video_brand_logo"></li>
+                                                <li className="video_title">
+                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
+                                                </li>
+                                            </ul>
+                                            <div className="video_channel">Channel Name 1</div>
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div className="video_card">
+                                    <Link to="/" className="video_link">
+                                        <div className="video_thumbnail"></div>
+                                        <div className="video_info">
+                                            <ul className="video_details">
+                                                <li className="video_brand_logo"></li>
+                                                <li className="video_title">
+                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
+                                                </li>
+                                            </ul>
+                                            <div className="video_channel">Channel Name 1</div>
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div className="video_card">
+                                    <Link to="/" className="video_link">
+                                        <div className="video_thumbnail"></div>
+                                        <div className="video_info">
+                                            <ul className="video_details">
+                                                <li className="video_brand_logo"></li>
+                                                <li className="video_title">
+                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
+                                                </li>
+                                            </ul>
+                                            <div className="video_channel">Channel Name 1</div>
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div className="video_card">
+                                    <Link to="/" className="video_link">
+                                        <div className="video_thumbnail"></div>
+                                        <div className="video_info">
+                                            <ul className="video_details">
+                                                <li className="video_brand_logo"></li>
+                                                <li className="video_title">
+                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
+                                                </li>
+                                            </ul>
+                                            <div className="video_channel">Channel Name 1</div>
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div className="video_card">
+                                    <Link to="/" className="video_link">
+                                        <div className="video_thumbnail"></div>
+                                        <div className="video_info">
+                                            <ul className="video_details">
+                                                <li className="video_brand_logo"></li>
+                                                <li className="video_title">
+                                                    Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1 Video Title 1
+                                                </li>
+                                            </ul>
+                                            <div className="video_channel">Channel Name 1</div>
+                                        </div>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
