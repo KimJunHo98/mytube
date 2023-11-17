@@ -88,6 +88,13 @@
             width: 100%;
             height: 100%;
 
+            @include mobile {
+                display: none;
+            }
+            @include s_mobile {
+                display: none;
+            }
+
             #search {
                 width: 100%;
                 height: 100%;
@@ -103,8 +110,15 @@
                         justify-content: center;
 
                         .search_input_box {
-                            width: 50%;
+                            width: 630px;
                             position: relative;
+
+                            @include labtop {
+                                width: 70%;
+                            }
+                            @include tablet {
+                                width: 90%;
+                            }
 
                             .search_input {
                                 width: 100%;
@@ -156,6 +170,37 @@
                 position: relative;
                 margin-left: 20px;
 
+                &.search {
+                    width: 36px;
+                    height: 36px;
+                    display: none;
+
+                    .search_btn {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50px;
+                        color: var(--white);
+                        background-color: transparent;
+                        cursor: pointer;
+
+                        svg {
+                            font-size: 2rem;
+                        }
+
+                        &:hover {
+                            border: 1px solid var(--black400);
+                            background-color: var(--black200);
+                        }
+                    }
+
+                    @include mobile {
+                        display: block;
+                    }
+                    @include s_mobile {
+                        display: block;
+                    }
+                }
+
                 &.alarm {
                     width: 36px;
                     text-align: center;
@@ -194,6 +239,77 @@
                         text-align: center;
                     }
                 }
+            }
+        }
+        .header_moblie_search {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #111;
+            display: none;
+
+            .header_moblie_inner {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                padding: 30px 15px;
+
+                .back_btn {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 15px;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    &:hover {
+                        border: 1px solid var(--black400);
+                        background-color: var(--black200);
+                    }
+
+                    svg {
+                        vertical-align: middle;
+                        font-size: 2.2rem;
+                        color: var(--white);
+                    }
+                }
+                .search_form {
+                    width: 100%;
+                    position: relative;
+
+                    .search_input {
+                        width: 100%;
+                        padding: 10px 20px;
+                        border-radius: 30px;
+                        border: 1px solid var(--black300);
+                        outline: 0 none;
+                        font-size: 1.6rem;
+                        color: var(--white);
+                        background-color: #111;
+                    }
+                    .search_btn {
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        padding: 7px 20px 7px 25px;
+                        transform: translateY(-50%);
+                        border-radius: 0 30px 30px 0;
+                        border: 1px solid var(--black300);
+                        font-size: 2rem;
+                        color: var(--white);
+                        background-color: var(--black100);
+                        cursor: pointer;
+                    }
+                }
+            }
+            @include mobile {
+                display: block;
+            }
+            @include s_mobile {
+                display: block;
             }
         }
     }

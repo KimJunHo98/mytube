@@ -1,11 +1,11 @@
 import React from "react";
-import { useActiveMenu } from "../../context/useActiveMenu";
+import { useMenuContext } from "../../context/useMenuContext";
 
 const Footer = () => {
-    const { activeMenu } = useActiveMenu();
-
+    const { slide } = useMenuContext();
+    
     return (
-        activeMenu && (
+        slide && (
             <footer id="footer">
                 <h2 className="blind">푸터</h2>
                 <div className="inner">

@@ -1,8 +1,13 @@
 #subscribe {
     width: 100%;
-    height: 100vh;
-    padding-top: 64px;
-    background-color: var(--black);
+    height: 100%;
+    padding: 64px 0 0 260px;
+    background-color: var(--bgColor);
+    font-family: var(--mainEng-font);
+    
+    &.resize {
+        padding-left: 101px;
+    }
 
     .subscribe {
         width: 100%;

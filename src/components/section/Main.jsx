@@ -1,11 +1,11 @@
 import React from "react";
-import { useActiveMenu } from "../../context/useActiveMenu";
+import { useMenuContext } from "../../context/useMenuContext";
 
 const Main = (props) => {
-    const { activeMenu } = useActiveMenu();
+    const { mainRef } = useMenuContext();
 
     return (
-        <main id="main" role="main" style={{ paddingLeft: activeMenu ? "260px" : "88px" }}>
+        <main id="main" role="main" ref={mainRef}>
             {props.children}
         </main>
     );

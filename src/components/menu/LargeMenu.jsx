@@ -16,8 +16,8 @@ const LargeMenu = ({ show, setShow, location, handleMenuClick }) => {
     };
 
     return (
-        <>
-            <ul className="menu_list">
+        <nav className="nav large_nav">
+            <ul className="large_menu_list">
                 {menus.map((menu, i) => (
                     <li className="menu_items" key={i}>
                         <Link
@@ -34,7 +34,7 @@ const LargeMenu = ({ show, setShow, location, handleMenuClick }) => {
                     </li>
                 ))}
             </ul>
-            <ul className="menu_list subscribe">
+            <ul className="large_menu_list subscribe">
                 <li className="list_title">구독</li>
                 {subscribe.map((subs, i) => (
                     <li className="menu_items" key={i}>
@@ -71,7 +71,7 @@ const LargeMenu = ({ show, setShow, location, handleMenuClick }) => {
                     </button>
                 </li>
             </ul>
-        </>
+        </nav>
     );
 };
 
