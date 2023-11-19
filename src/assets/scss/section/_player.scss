@@ -1,0 +1,27 @@
+#player {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgColor);
+
+    .player {
+        width: 100%;
+        height: 100%;
+
+        .player_box {
+            width: 100%;
+            height: 100%;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        .player_info {
+            width: 100%;
+            height: 2000px;
+        }
+    }
+}

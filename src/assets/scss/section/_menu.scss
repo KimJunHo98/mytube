@@ -1,15 +1,10 @@
 .menu_container {
-    width: 100%;
-    max-width: 260px;
+    width: auto;
     height: 100%;
     position: fixed;
     left: 0;
     top: 60px;
-    background-color: var(--bgColor);
-
-    @include s_mobile {
-        display: none;
-    }
+    z-index: 999;
 
     &:hover {
         overflow-y: auto;
@@ -26,8 +21,15 @@
         background-color: var(--black);
     }
 
-    &.resize {
-        width: 101px;
+    &.resize.active {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        bottom: 0;
+        right: 0;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, .5);
     }
 
     .nav {
@@ -35,19 +37,13 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        background-color: var(--bgColor);
 
         &.large_nav {
-            width: 100%;
+            width: 260px;
         }
         &.small_nav {
             width: 101px;
-        }
-        &.active_nav {
-            display: none;
-
-            @include s_mobile {
-                display: block;
-            }
         }
 
         .large_menu_list {
@@ -132,15 +128,17 @@
     }
 }
 .active_menu {
+    width: 100%;
+    height: 100%;
     position: fixed;
     left: 0;
     top: 60px;
     bottom: 0;
     right: 0;
-    display: none;
+    // display: none;
     z-index: 999;
-    background-color: rgba(0, 0, 0, .5);
-    
+    background-color: rgba(0, 0, 0, 0.5);
+
     .nav {
         width: 101px;
         height: 100%;
@@ -148,40 +146,40 @@
         flex-direction: column;
         background-color: var(--bgColor);
 
-        .menu_items {
+        .menu_list {
             width: 100%;
             padding: 6px 20px 10px 15px;
 
-            .menu_links {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 15px;
-                margin-bottom: 5px;
-                font-size: 1.2rem;
-                font-weight: 400;
-                color: var(--white);
+            .menu_items {
+                width: 100%;
 
-                span {
-                    display: block;
-                    pointer-events: auto;
+                .menu_links {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 15px;
+                    margin-bottom: 5px;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: var(--white);
 
-                    svg {
-                        vertical-align: text-top;
-                        font-size: 2rem;
+                    span {
+                        display: block;
+                        pointer-events: auto;
+
+                        svg {
+                            vertical-align: text-top;
+                            font-size: 2rem;
+                        }
                     }
-                }
 
-                &.show,
-                &:hover {
-                    border-radius: 10px;
-                    background-color: rgba(50, 50, 50, 0.8);
+                    &.show,
+                    &:hover {
+                        border-radius: 10px;
+                        background-color: rgba(50, 50, 50, 0.8);
+                    }
                 }
             }
         }
-    }
-
-    @include s_mobile {
-        display: block;
     }
 }

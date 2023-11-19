@@ -50,7 +50,6 @@
                 border-radius: 50px;
 
                 &:hover {
-                    border: 1px solid var(--black400);
                     background-color: var(--black200);
                 }
 
@@ -170,6 +169,10 @@
                 position: relative;
                 margin-left: 20px;
 
+                @include s_mobile {
+                    margin-left: 10px;
+                }
+
                 &.search {
                     width: 36px;
                     height: 36px;
@@ -188,7 +191,6 @@
                         }
 
                         &:hover {
-                            border: 1px solid var(--black400);
                             background-color: var(--black200);
                         }
                     }
@@ -208,7 +210,6 @@
                     cursor: pointer;
 
                     &:hover {
-                        border: 1px solid var(--black400);
                         background-color: var(--black200);
                     }
                     span {

@@ -5,10 +5,11 @@ import { useMenuContext } from "../context/useMenuContext";
 import useFetchApi from "../context/useFetchApi";
 
 import { ImSpinner8 } from "react-icons/im";
+import Menu from "./Menu";
 
 const Home = ({ title, description }) => {
     const { resize } = useMenuContext();
-    const { videos, videoPlayer } = useFetchApi();
+    const { videos } = useFetchApi();
 
     return (
         <>
@@ -16,6 +17,8 @@ const Home = ({ title, description }) => {
                 {title && <title>{title}</title>}
                 <meta name="description" content={description} />
             </Helmet>
+            
+            <Menu />
             <section id="home" className={resize ? "" : "resize"}>
                 <h2 className="blind">홈화면</h2>
                 <div className="container">
