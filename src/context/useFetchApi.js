@@ -3,11 +3,12 @@ import axios from "axios";
 
 const useFetchApi = () => {
     const [videos, setVideos] = useState([]);
+    const [init, setInit] = useState(false);
     const API_KEY = process.env.REACT_APP_API_KEY;
     const API_URL = "https://youtube.googleapis.com/youtube/v3/";
-    const videoEndPoint = `${API_URL}videos?part=snippet&chart=mostPopular&maxResults=16&regionCode=kr&key=${API_KEY}`;
+    const videoEndPoint = `${API_URL}videos?part=snippet&chart=mostPopular&maxResults=16&regionCode=kr&key=${API_KEY}`;;
 
-    const getVideos = () => {
+    useEffect(() => {
         axios
             .get(videoEndPoint)
             .then((result) => {
@@ -17,6 +18,7 @@ const useFetchApi = () => {
                     const videos = result.data.items;
 
                     setVideos(videos);
+                    setInit(true);
                 } else if (status === 404) {
                     console.log("404 error");
                 }
@@ -24,13 +26,9 @@ const useFetchApi = () => {
             .catch((err) => {
                 console.error(err);
             });
-    };
+    }, [videoEndPoint]);
 
-    useEffect(() => {
-        getVideos();
-    }, []);
-
-    return { videos };
+    return { videos, init };
 };
 
 export default useFetchApi;

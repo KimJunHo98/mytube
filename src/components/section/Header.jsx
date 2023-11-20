@@ -1,6 +1,7 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMenuContext } from "../../context/useMenuContext";
+import useSearchVideo from "../../context/useSearchVideo";
 
 import { AiFillBell, AiFillYoutube, AiOutlineBell } from "react-icons/ai";
 import { FiArrowLeft } from "react-icons/fi";
@@ -8,15 +9,17 @@ import { BsSearch } from "react-icons/bs";
 
 const Header = () => {
     const { handleMenuBtnClick } = useMenuContext();
+    const { onChange, searchText } = useSearchVideo();
     const [show, setShow] = useState(false);
     const [close, setClose] = useState(false);
+    console.log(searchText);
 
     const handlSearchBtnClick = () => {
-        setClose(prevClose => !prevClose);
-    }
+        setClose((prevClose) => !prevClose);
+    };
     const handleBackBtnClick = () => {
-        setClose(prevClose => !prevClose);
-    }
+        setClose((prevClose) => !prevClose);
+    };
     const handleAlarmClick = () => {
         setShow((prevShow) => !prevShow);
     };
@@ -40,10 +43,12 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="header_center">
-                        <div id="search">
+                        <div className="header_pc_search">
                             <div className="search_inner">
                                 <form onSubmit={(e) => e.preventDefault()} className="search_form">
-                                    <label htmlFor="search_input" className="ir"></label>
+                                    <label htmlFor="search_input" className="ir">
+                                        영상 검색
+                                    </label>
                                     <div className="search_input_box">
                                         <input
                                             type="serach"
@@ -51,9 +56,11 @@ const Header = () => {
                                             id="search_input"
                                             autoComplete="off"
                                             placeholder="검색"
+                                            value={searchText}
+                                            onChange={onChange}
                                             className="search_input"
                                         />
-                                        <button type="submit" className="search_btn">
+                                        <button type="button" className="search_btn">
                                             <BsSearch />
                                         </button>
                                     </div>
@@ -74,27 +81,35 @@ const Header = () => {
                             <p>JUN</p>
                         </div>
                     </div>
-                    {close && <div className="header_moblie_search">
-                        <div className="header_moblie_inner">
-                            <button className="back_btn" onClick={handleBackBtnClick}><FiArrowLeft /></button>
-                            <form onSubmit={(e) => e.preventDefault()} className="search_form">
-                                <label htmlFor="mobile_search_input" className="ir"></label>
-                                <div className="search_input_box">
-                                    <input
-                                        type="serach"
-                                        name="search_input"
-                                        id="mobile_search_input"
-                                        autoComplete="off"
-                                        placeholder="검색"
-                                        className="search_input"
-                                    />
-                                    <button type="submit" className="search_btn">
-                                        <BsSearch />
-                                    </button>
-                                </div>
-                            </form>
+                    {close && (
+                        <div className="header_moblie_search">
+                            <div className="header_moblie_inner">
+                                <button className="back_btn" onClick={handleBackBtnClick}>
+                                    <FiArrowLeft />
+                                </button>
+                                <form onSubmit={(e) => e.preventDefault()} className="search_form">
+                                    <label htmlFor="mobile_search_input" className="ir">
+                                        영상 검색
+                                    </label>
+                                    <div className="search_input_box">
+                                        <input
+                                            type="serach"
+                                            name="search_input"
+                                            id="mobile_search_input"
+                                            autoComplete="off"
+                                            placeholder="검색"
+                                            value={searchText}
+                                            onChange={onChange}
+                                            className="search_input"
+                                        />
+                                        <button type="submit" className="search_btn">
+                                            <BsSearch />
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>}
+                    )}
                 </div>
             </div>
         </header>

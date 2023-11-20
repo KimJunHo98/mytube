@@ -11,12 +11,12 @@ export const menus = [
     {
         title: "구독",
         icon1: <MdOutlineSubscriptions />,
-        src: "/",
+        src: "/subscribe",
     },
     {
         title: "추천",
         icon1: <BiLike />,
-        src: "/",
+        src: "/recommend",
     },
 ];
 

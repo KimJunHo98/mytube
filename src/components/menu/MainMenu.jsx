@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useMenuContext } from "../../context/useMenuContext";
 import { menus, subscribe } from "../../constants/data";
 
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 
-const LargeMenu = () => {
+const MainMenu = () => {
     const [more, setMore] = useState(false);
+    const { handleMenuBtnClick } = useMenuContext();
 
     const handleMoreBtnClick = () => {
         setMore((prevMore) => !prevMore);
-    };
+    };;
+
     return (
         <nav className="nav large_nav">
             <ul className="large_menu_list">
@@ -18,6 +21,7 @@ const LargeMenu = () => {
                         <Link
                             to={menu.src}
                             className="menu_links"
+                            onClick={handleMenuBtnClick}
                         >
                             <span>{menu.icon1}</span>
                             {menu.title}
@@ -62,4 +66,4 @@ const LargeMenu = () => {
     );
 };
 
-export default LargeMenu;
+export default MainMenu;

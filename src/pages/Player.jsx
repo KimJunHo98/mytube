@@ -50,19 +50,21 @@ const Player = ({ description, title }) => {
                 {activeMenu && <MainMenu />}
                 <Footer />
             </aside>
-            <section id="player">
-                <h2 className="blind">영상 플레이</h2>
-                <div className="container">
-                    <div className="inner">
-                        <div className="player">
-                            <div className="player_box">
-                                <YouTube videoId={id} opts={options} onReady={() => {}} ref={playerRef} />
+            {id && (
+                <section id="player">
+                    <h2 className="blind">영상 플레이</h2>
+                    <div className="container">
+                        <div className="inner">
+                            <div className="player">
+                                <div className="player_box">
+                                    <YouTube videoId={id} opts={options} onReady={() => {}} ref={playerRef} />
+                                </div>
+                                <div className="player_info"></div>
                             </div>
-                            <div className="player_info"></div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            )}
         </>
     );
 };
