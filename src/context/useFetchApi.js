@@ -6,7 +6,7 @@ const useFetchApi = () => {
     const [init, setInit] = useState(false);
     const API_KEY = process.env.REACT_APP_API_KEY;
     const API_URL = "https://youtube.googleapis.com/youtube/v3/";
-    const videoEndPoint = `${API_URL}videos?part=snippet&chart=mostPopular&maxResults=16&regionCode=kr&key=${API_KEY}`;;
+    const videoEndPoint = `${API_URL}videos?part=snippet&chart=mostPopular&maxResults=16&regionCode=kr&key=${API_KEY}`;
 
     useEffect(() => {
         axios

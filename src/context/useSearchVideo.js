@@ -19,8 +19,8 @@ const useSearchVideo = () => {
                     const videos = result.data.items;
 
                     setSearchResult(videos);
-                } else if (status === 404) {
-                    console.log("404 error");
+                } else if (status !== 200) {
+                    console.log(`${status} error`);
                 }
             })
             .catch((err) => {
@@ -33,11 +33,11 @@ const useSearchVideo = () => {
     };
 
     const filteredVideos = searchResult.filter((search) => {
-        if (!search || !search.title) {
+        if (!search || !search.snippet.title) {
             return false;
         }
 
-        const videoTitleLower = search.title.toLowerCase();
+        const videoTitleLower = search.snippet.title.toLowerCase();
         const searchTextLower = searchText.toLowerCase();
 
         return videoTitleLower.includes(searchTextLower);
