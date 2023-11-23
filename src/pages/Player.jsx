@@ -56,10 +56,9 @@ const Player = ({ description, title }) => {
                     <div className="container">
                         <div className="inner">
                             <div className="player">
-                                <div className="player_box">
+                                <div className="player_video_box">
                                     <YouTube videoId={id} opts={options} onReady={() => {}} ref={playerRef} />
                                 </div>
-                                <div className="player_info"></div>
                             </div>
                         </div>
                     </div>

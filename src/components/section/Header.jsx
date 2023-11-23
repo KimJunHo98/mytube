@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useMenuContext } from "../../context/useMenuContext";
 import useSearchVideo from "../../context/useSearchVideo";
 
@@ -9,10 +9,10 @@ import { BsSearch } from "react-icons/bs";
 
 const Header = () => {
     const { handleMenuBtnClick } = useMenuContext();
-    const { onChange, searchText, filteredVideos } = useSearchVideo();
+    const { onChange, searchText, handleInputSubmit } = useSearchVideo();
     const [show, setShow] = useState(false);
     const [close, setClose] = useState(false);
-    const history = useHistory(); 
+    
 
     const handlSearchBtnClick = () => {
         setClose((prevClose) => !prevClose);
@@ -22,16 +22,6 @@ const Header = () => {
     };
     const handleAlarmClick = () => {
         setShow((prevShow) => !prevShow);
-    };
-    const handleInputSubmit = (e) => {
-        e.preventDefault();
-        if (filteredVideos.length > 0) {
-            // 검색 결과가 있으면 search 페이지로 이동
-            history.push("/search");
-        } else {
-            // 검색 결과가 없으면 home 페이지로 이동
-            history.push("/");
-        }
     };
 
     return (
