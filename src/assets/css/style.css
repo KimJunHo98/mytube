@@ -169,7 +169,6 @@ body::-webkit-scrollbar-track {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
 }
 #header .header .header_left {
   width: 100%;
