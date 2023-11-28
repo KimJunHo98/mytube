@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-// import { debounce } from "lodash";
+import { debounce } from "lodash";
 
 const useSearchVideo = () => {
     const [searchResult, setSearchResult] = useState([]);
@@ -10,14 +10,15 @@ const useSearchVideo = () => {
     const navigate = useNavigate();
 
     const API_KEY = process.env.REACT_APP_API_KEY;
-    const API_URL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=16&order=viewCount&regionCode=kr&pageToken=CBAQAA&type=video&q=`;
+    const API_URL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=16&order=rating&pageToken=CBAQAA&regionCode=kr&videoType=any";
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchData = debounce(async () => {
             try {
                 setLoading(true);
 
-                const searchResponse = `${API_URL}${encodeURIComponent(searchText)}&key=${API_KEY}`;
+                const encodedSearchText = encodeURIComponent(searchText);
+                const searchResponse = `${API_URL}&q=${encodedSearchText}&key=${API_KEY}`;
 
                 const result = await axios.get(searchResponse);
                 const status = result.status;
@@ -33,7 +34,7 @@ const useSearchVideo = () => {
             } finally {
                 setLoading(false);
             }
-        };
+        }, 600);
 
         fetchData();
     }, [searchText]);
@@ -49,8 +50,6 @@ const useSearchVideo = () => {
             search.snippet.channelTitle.toLowerCase().includes(searchText.toLowerCase())
     );
 
-    // console.log(filteredVideos);
-
     const handleInputSubmit = (e) => {
         e.preventDefault();
 
@@ -60,6 +59,7 @@ const useSearchVideo = () => {
             navigate("/search");
         } else {
             navigate("/");
+            setSearchResult([]);
         }
     };
 

@@ -6,7 +6,7 @@ import Menu from "./Menu";
 
 const Recommend = ({ title, description }) => {
     const { resize } = useMenuContext();
-    
+
     return (
         <>
             <Helmet titleTemplate="%s | MyTube" defaultTitle="MyTube" defer={false}>

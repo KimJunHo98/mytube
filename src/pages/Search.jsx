@@ -35,7 +35,7 @@ const Search = ({ title, description }) => {
                                 <article className="search_contents">
                                     <div className="contents_area">
                                         {filteredVideos.map((video, i) => (
-                                            <div key={video.id.videoId} className={`video_card card${i + 1}`}>
+                                            <div key={video.id.playlistId || video.id.videoId} className={`video_card card${i + 1}`}>
                                                 <Link to={`/player/${video.id.videoId}`} className="video_link">
                                                     <div className="video_thumbnail">
                                                         <img
