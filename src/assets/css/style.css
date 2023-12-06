@@ -1033,11 +1033,11 @@ body::-webkit-scrollbar-track {
 #search .search {
   width: 100%;
   height: 100%;
-  padding: 30px;
+  padding: 30px 30px 30px 150px;
 }
 @media all and (min-width: 1024px) and (max-width: 1279px) {
   #search .search {
-    padding: 26px;
+    padding: 26px 26px 26px 150px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -1058,92 +1058,54 @@ body::-webkit-scrollbar-track {
 #search .search .search_contents {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 #search .search .search_contents .contents_area {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 50px 15px;
+  display: grid;
+  gap: 3rem 0;
 }
-@media all and (min-width: 480px) and (max-width: 767px) {
-  #search .search .search_contents .contents_area {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
+#search .search .search_contents .contents_area .latest {
+  padding: 30px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--black300);
 }
 #search .search .search_contents .contents_area .video_card {
-  width: 24%;
-}
-@media all and (max-width: 1484px) {
-  #search .search .search_contents .contents_area .video_card {
-    width: 32%;
-  }
-  #search .search .search_contents .contents_area .video_card.card16 {
-    display: none;
-  }
-}
-@media all and (max-width: 1105px) {
-  #search .search .search_contents .contents_area .video_card {
-    width: 31%;
-  }
-}
-@media all and (max-width: 1022px) {
-  #search .search .search_contents .contents_area .video_card {
-    width: 32%;
-  }
-}
-@media all and (max-width: 958px) {
-  #search .search .search_contents .contents_area .video_card {
-    width: 48%;
-  }
-  #search .search .search_contents .contents_area .video_card.card16 {
-    display: block;
-  }
-}
-@media all and (min-width: 480px) and (max-width: 767px) {
-  #search .search .search_contents .contents_area .video_card {
-    width: 100%;
-  }
-}
-@media all and (max-width: 479px) {
-  #search .search .search_contents .contents_area .video_card {
-    width: 100%;
-  }
+  width: 100%;
+  height: 100%;
 }
 #search .search .search_contents .contents_area .video_card .video_link {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) 2fr;
   color: var(--white);
 }
 #search .search .search_contents .contents_area .video_card .video_link .video_thumbnail {
   width: 100%;
-  height: 100%;
-  max-height: 300px;
-}
-@media all and (min-width: 480px) and (max-width: 767px) {
-  #search .search .search_contents .contents_area .video_card .video_link .video_thumbnail {
-    max-height: 100%;
-  }
 }
 #search .search .search_contents .contents_area .video_card .video_link .video_thumbnail .thumbnail_img {
+  width: 100%;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 #search .search .search_contents .contents_area .video_card .video_link .video_info {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  padding: 10px 0 10px 30px;
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  #search .search .search_contents .contents_area .video_card .video_link .video_info {
+    padding-left: 15px;
+  }
+}
+@media all and (max-width: 479px) {
+  #search .search .search_contents .contents_area .video_card .video_link .video_info {
+    padding-left: 15px;
+  }
 }
 #search .search .search_contents .contents_area .video_card .video_link .video_info .video_details {
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto 1fr;
   padding: 15px 0 5px;
 }
 @media all and (min-width: 480px) and (max-width: 767px) {
@@ -1158,8 +1120,13 @@ body::-webkit-scrollbar-track {
   border-radius: 50px;
   background-color: var(--white);
 }
-#search .search .search_contents .contents_area .video_card .video_link .video_info .video_details .video_title {
-  width: 80%;
+#search .search .search_contents .contents_area .video_card .video_link .video_info .video_details .video_channel {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--black500);
+}
+#search .search .search_contents .contents_area .video_card .video_link .video_info .video_title {
+  width: 100%;
   display: -webkit-box;
   overflow: hidden;
   white-space: wrap;
@@ -1168,12 +1135,6 @@ body::-webkit-scrollbar-track {
   -webkit-box-orient: vertical;
   font-size: 1.6rem;
   font-weight: 600;
-}
-#search .search .search_contents .contents_area .video_card .video_link .video_info .video_channel {
-  margin-left: 45px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--black500);
 }
 
 .loading_spinner {

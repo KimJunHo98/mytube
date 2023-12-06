@@ -12,6 +12,7 @@ import Subscribe from "./pages/Subscribe";
 import Recommend from "./pages/Recommend";
 import Search from "./pages/Search";
 
+
 const App = () => {
     return (
         <MenuContextProvider>
