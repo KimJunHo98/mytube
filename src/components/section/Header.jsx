@@ -9,10 +9,8 @@ import { BsSearch } from "react-icons/bs";
 
 const Header = () => {
     const { handleMenuBtnClick } = useMenuContext();
-    const { onChange, searchText, handleInputSubmit } = useSearchVideo();
+    const { onChange, searchText, handleInputSubmit, close, setClose } = useSearchVideo();
     const [show, setShow] = useState(false);
-    const [close, setClose] = useState(false);
-    
 
     const handlSearchBtnClick = () => {
         setClose((prevClose) => !prevClose);

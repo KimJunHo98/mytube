@@ -40,6 +40,14 @@
                 display: grid;
                 gap: 3rem 0;
 
+                .none {
+                    width: 100%;
+                    padding-top: 30px;
+                    text-align: center;
+                    font-size: 2rem;
+                    font-family: var(--mainKor-font);
+                    color: var(--white);
+                }
                 .latest {
                     display: grid;
                     gap:  3rem 0;

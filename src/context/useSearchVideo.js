@@ -7,6 +7,7 @@ const useSearchVideo = () => {
     const [date, setDate] = useState([]);
     const [searchText, setSearchText] = useState("");
     const [loading, setLoading] = useState(false);
+    const [close, setClose] = useState(false);
     const navigate = useNavigate();
 
     const API_KEY = process.env.REACT_APP_API_KEY;
@@ -60,19 +61,22 @@ const useSearchVideo = () => {
 
         return searchTitleLower.includes(searchTextLower);
     });
-    console.log(filteredVideos1, filteredVideos2);
 
     const handleInputSubmit = (e) => {
         e.preventDefault();
 
         setSearchText("");
+        setClose(false);
 
         if (filteredVideos1 && filteredVideos2) {
             navigate("/search");
+
+            setDate([]);
+            setViewCount([]);
         }
     };
 
-    return { onChange, filteredVideos1, filteredVideos2, searchText, setSearchText, loading, handleInputSubmit };
+    return { onChange, filteredVideos1, filteredVideos2, searchText, setSearchText, loading, handleInputSubmit, close, setClose };
 };
 
 export default useSearchVideo;
